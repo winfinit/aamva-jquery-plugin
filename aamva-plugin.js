@@ -25,7 +25,23 @@
                 "iso_iin": res2[2],
                 "dl": res2[3],
                 "expiration_date": res2[5],
-                "birthday": res2[6],
+                "birthday": function() {
+                    var dob = res2[6].match(/(\d{4})(\d{2})(\d{2})/);
+                    dob[1] = parseInt(dob[1]);
+                    dob[2] = parseInt(dob[2]);
+                    dob[3] = parseInt(dob[3]);
+
+                    if (dob[2] === 99) {
+                        /* FL decided to reverse 2012 aamva spec, 99 means here 
+                            that dob month === to expiration month, it should be 
+                            opposite
+                            */
+                        var exp_dt = res2[5].match(/(\d{2})(\d{2})/);
+                        dob[2] = parseInt(exp_dt[2]);
+                    }
+                    dob[2]--;
+                    return (new Date(dob[1], dob[2], dob[3]));
+                },
                 "dl_overflow": res2[7],
                 "cds_version": res3[1],
                 "jurisdiction_version": res3[2],

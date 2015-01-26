@@ -18,6 +18,7 @@ small jquery plugin that helps to parse magnetic stripe from aamva
   console.log("Middle name:",res.name().middle);
   console.log("Sex:",res.sex()); /* MALE, FEMALE, MISSING/INVALID */
   console.log("Entire object", res);
+  console.log("DOB:",res.birthday()); /* Thu Jan 08 1987 00:00:00 GMT-0500 (EST) */
 
 /* 
   output: 
@@ -28,7 +29,7 @@ small jquery plugin that helps to parse magnetic stripe from aamva
           iso_iin: '636010',
           dl: '0462172082009',
           expiration_date: '2101',
-          birthday: '19829909',
+          birthday: [Function],
           dl_overflow: '0',
           cds_version: '#',
           jurisdiction_version: '!',
