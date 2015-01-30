@@ -2,6 +2,9 @@
 
 small jquery plugin that helps to parse magnetic stripe from aamva
 
+**NOTE**:
+To support this effort, please contribute swipe streams for unsupported types
+and I would love to add support or fix things that are not working yet
 
 ## Usage
 
