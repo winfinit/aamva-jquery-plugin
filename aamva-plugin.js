@@ -1,6 +1,6 @@
 (function($) {
     $.aamva = {
-      stripe: function(data) {
+        stripe: function(data) {
             data = data.replace(/\n/, "");
             // replace spaces with regular space
             data = data.replace(/\s/g, " ");
@@ -11,7 +11,6 @@
             return {
                 "state": res1[2],
                 "city": res1[3],
-                "name": res1[4],
                 "name": function() {
                     var res = res1[4].match(/([^\$]{0,35})\$?([^\$]{0,35})?\$?([^\$]{0,35})?/);
                     return {
