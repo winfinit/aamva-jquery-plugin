@@ -11,10 +11,6 @@ example html page:
 https://github.com/winfinit/aamvajs/blob/master/example.html
 **
 
-## Release History
-
-* 0.0.1 Initial release
-
 ## Legal
 
 This program is free software; you can redistribute it and/or
