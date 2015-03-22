@@ -2,54 +2,14 @@
 
 small jquery plugin that helps to parse magnetic stripe from aamva
 
+**DEPRECATED: AAMVA.js was converted to a standalone module that works with node and 
+a browser, please consider using it directly:
+https://github.com/winfinit/aamvajs
+https://www.npmjs.com/package/aamva
 
-## Usage
-
-```javascript
-  var stripe_data = '%FLDELRAY BEACH^DOE$JOHN$^4818 S FEDERAL BLVD^           \?\
-  ;6360100462172082009=2101198299090=?\
-  #! 33435      I               1600                                   ECCECC00000?';
-
-  var res = $.aamva.parse($stripe_data);
-
-  console.log("DMV ID:",res.id());
-  console.log("First name:",res.name().first);
-  console.log("Last name:",res.name().last);
-  console.log("Middle name:",res.name().middle);
-  console.log("Sex:",res.sex()); /* MALE, FEMALE, MISSING/INVALID */
-  console.log("Entire object", res);
-
-/* 
-  output: 
-        { state: 'FL',
-          city: 'DELRAY BEACH',
-          name: [Function],
-          address: '4818 S FEDERAL BLVD',
-          iso_iin: '636010',
-          dl: '0462172082009',
-          expiration_date: '2101',
-          birthday: '19829909',
-          dl_overflow: '0',
-          cds_version: '#',
-          jurisdiction_version: '!',
-          postal_code: '33435      ',
-          class: 'I ',
-          restrictions: '          ',
-          endorsments: '    ',
-          sex: [Function],
-          height: '600',
-          weight: '   ',
-          hair_color: '   ',
-          eye_color: '   ',
-          misc: '                          ECCECC00000',
-          id: [Function] }
-*/
-
-```
-
-## Contributing
-
-If you find a bug or willing to add some enhancement, pull requests are very welcome
+example html page:
+https://github.com/winfinit/aamvajs/blob/master/example.html
+**
 
 ## Release History
 
