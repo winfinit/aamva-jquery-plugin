@@ -6,10 +6,9 @@ small jquery plugin that helps to parse magnetic stripe from aamva
 AAMVA.js was converted to a standalone module that works with node and 
 a browser, please consider using it directly:**
 * GitHub: https://github.com/winfinit/aamvajs
-* npm: *https://www.npmjs.com/package/aamva
-
-## example html page:
-https://github.com/winfinit/aamvajs/blob/master/example.html
+* npm: https://www.npmjs.com/package/aamva
+* html example: https://github.com/winfinit/aamvajs/blob/master/example.html
+* JSFIDDLE: https://jsfiddle.net/winfinit/kv4rwLyr/2/
 
 ## Legal
 
